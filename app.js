@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const mongoose = require('./services/mongo')
 //Midlewares
 
 //Routers
@@ -59,4 +60,5 @@ app.use((req, res) => {
     });
 })
 
+mongoose.register()
 module.exports=app
